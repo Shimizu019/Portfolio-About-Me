@@ -1,0 +1,439 @@
+/* --- Variables & Reset --- */
+:root {
+    --bg-color: #000000;
+    --card-bg: #0f0f11;
+    --text-main: #ffffff;
+    --text-muted: #a1a1aa;
+    --accent: #8b5cf6; /* The purple color */
+    --accent-hover: #7c3aed;
+    --border-color: #27272a;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Typography & Utilities --- */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 1.5rem; color: var(--text-muted); font-weight: 400; }
+h3 { font-size: 2rem; margin-bottom: 2rem; }
+
+.highlight { color: var(--accent); }
+.container { max-width: 1000px; margin: 0 auto; padding: 4rem 1.5rem; }
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+}
+.btn-primary:hover { background-color: var(--accent-hover); box-shadow: 0 0 15px rgba(139, 92, 246, 0.4); }
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-main);
+    margin-left: 1rem;
+}
+.btn-secondary:hover { border-color: var(--text-main); background-color: rgba(255,255,255,0.05); }
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.badge {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.hero-text {
+    max-width: 600px;
+    color: var(--text-muted);
+    margin: 1.5rem 0 2.5rem;
+}
+
+/* --- About Section --- */
+.about-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text { flex: 1; }
+.about-text p { color: var(--text-muted); margin-bottom: 1rem; }
+
+.about-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Placeholder for the pixel art */
+.pixel-art {
+    font-size: 8rem;
+    color: var(--accent);
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+.sparkles {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 2rem;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* --- Skills Section --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.tags span {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Experience Section --- */
+.timeline {
+    position: relative;
+    border-left: 2px solid var(--border-color);
+    margin-left: 3rem;
+    padding-left: 2rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.year-bubble {
+    position: absolute;
+    left: -4.5rem;
+    top: 0;
+    background-color: var(--accent);
+    color: white;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+.timeline-content {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.timeline-content h4 {
+     margin-bottom: 0.2rem; 
+
+    }
+
+.timeline-content .company {
+     color: var(--accent);
+      font-size: 0.9rem;
+       display: block; 
+       margin-bottom: 0.8rem; 
+
+    }
+
+.timeline-content p {
+     color: var(--text-muted);
+      font-size: 0.9rem;
+
+     }
+
+/* --- Projects Section --- */
+.section-header p { 
+    color: var(--text-muted);
+     margin-bottom: 2rem; 
+
+    }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover { 
+    transform: translateY(-5px);
+     border-color: var(--accent); 
+
+    }
+
+.project-img {
+            height: 180px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            background: (180deg, rgba(30,10,50,1) 0%, rgba(139,92,246,0.2) 100%);
+}
+
+.project-info { 
+    padding: 1.5rem; 
+
+}
+
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.btn-sm {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+}
+
+.project-actions .icons {
+     font-size: 1.2rem; color: var(--text-muted); 
+     
+    }
+
+.project-actions .icons i { 
+    margin-left: 10px; cursor: pointer;
+     transition: color 0.3s; 
+
+    }
+
+.project-actions .icons i:hover {
+     color: white; 
+
+    }
+
+/* --- Footer / Contact --- */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+label { 
+    display: block;
+     margin-bottom: 0.5rem;
+      font-size: 0.9rem; 
+      color: var(--text-muted); 
+
+    }
+
+input, textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-family: inherit;
+
+}
+
+input:focus, textarea:focus { 
+    outline: none; border-color: var(--accent); 
+
+}
+
+.full-width {
+     width: 100%;
+
+     }
+
+.info-box {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+
+}
+
+.info-box p {
+     color: var(--text-muted);
+      font-size: 0.9rem;
+       margin-bottom: 1rem;
+
+     }
+
+.info-box ul {
+     list-style: none; 
+     color: var(--text-main);
+      font-size: 0.9rem;
+
+     }
+
+.info-box ul li { 
+    margin-bottom: 0.5rem; 
+
+}
+
+.socials-box {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+
+}
+
+.social-icons { 
+    display: flex; 
+    gap: 1rem; margin-top: 0.5rem;
+
+ }
+
+.social-icons a {
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+
+}
+
+.social-icons a:hover { 
+    color: var(--accent); 
+
+}
+
+/* --- Animation Class --- */
+.hidden { 
+    opacity: 0; 
+    transform: translateY(20px);
+     transition: all 0.6s ease-out; 
+
+    }
+
+.show { 
+    opacity: 1; 
+    transform: translateY(0);
+
+ }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .about-content { 
+        flex-direction: column-reverse; 
+
+    }
+
+    .contact-wrapper { 
+        flex-direction: column; 
+
+    }
+
+    h1 {
+         font-size: 2.2rem;
+
+         }
+
+    .timeline { 
+        margin-left: 0;
+         border-left: none;
+          padding-left: 0;
+
+         }
+
+    .timeline-item { 
+        padding-left: 0; 
+
+    }
+
+    .year-bubble {
+         position: relative;
+          left: 0; margin-bottom: 1rem;
+          
+         }
+}
