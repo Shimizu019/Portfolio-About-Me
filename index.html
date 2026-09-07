@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Benju Guzman | Portfolio</title>
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="grid"></div>
+        <div class="particles"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="navbar">
+
+        <div class="logo">
+            BG<span>.</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about" class="active">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+                <svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+                <svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+            </button>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <span class="scroll-progress" id="scrollProgress" aria-hidden="true"></span>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero" id="home">
+
+            <div class="hero-copy">
+
+                <p class="hero-eyebrow reveal" style="--d:0ms">
+                    HELLO, I AM
+                </p>
+
+                <h1 class="hero-name reveal" style="--d:80ms">
+                    Benju <span>Guzman</span>
+                </h1>
+
+                <p class="hero-role reveal" style="--d:160ms">
+                    I am a
+                    <span class="typed" id="typedText"></span><span class="caret" aria-hidden="true"></span>
+                </p>
+
+                <p class="hero-tagline reveal" style="--d:240ms">
+                    A 3rd-year BSIT student at Cavite State University who
+                    enjoys turning ideas into functional software and clean,
+                    meaningful user experiences.
+                </p>
+
+                <div class="hero-cta reveal" style="--d:320ms">
+
+                    <a href="#about" class="btn btn-primary">
+                        Explore My Work
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <polyline points="19 12 12 19 5 12"/>
+                        </svg>
+                    </a>
+
+                    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+
+                </div>
+
+                <div class="hero-pills reveal" style="--d:400ms">
+
+                    <span class="pill">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Full Stack Focus
+                    </span>
+
+                    <span class="pill">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        UI/UX Minded
+                    </span>
+
+                    <span class="pill">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        Always Learning
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual reveal" style="--d:360ms">
+
+                <div class="code-card">
+
+                    <div class="code-top">
+                        <span class="dot dot-r"></span>
+                        <span class="dot dot-y"></span>
+                        <span class="dot dot-g"></span>
+                        <span class="code-title">benju.config.js</span>
+                    </div>
+
+                    <pre class="code-body"><code><span class="tk-cm">// profile of a builder</span>
+<span class="tk-kw">const</span> developer <span class="tk-punc">=</span> <span class="tk-punc">{</span>
+  <span class="tk-prop">name</span>: <span class="tk-str">"Benju Guzman"</span>,
+  <span class="tk-prop">role</span>: <span class="tk-str">"Software Developer"</span>,
+  <span class="tk-prop">focus</span>: [<span class="tk-str">"Frontend"</span>, <span class="tk-str">"Backend"</span>, <span class="tk-str">"UI/UX"</span>],
+  <span class="tk-prop">education</span>: <span class="tk-str">"BSIT @ CvSU"</span>,
+  <span class="tk-prop">hardWorker</span>: <span class="tk-bool">true</span>,
+<span class="tk-punc">}</span>;
+
+<span class="tk-kw">export default</span> developer;</code></pre>
+
+                </div>
+
+                <div class="float-chip chip-1">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    20+ Projects Built
+                </div>
+
+                <div class="float-chip chip-2">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    3+ Years Learning
+                </div>
+
+            </div>
+
+            <div class="hero-tech reveal" style="--d:400ms">
+                <div class="tech-track">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Java</span>
+                    <span>PHP</span>
+                    <span>SQL</span>
+                    <span>Laravel</span>
+                    <span>Flutter</span>
+                    <span>React</span>
+                    <span>Git</span>
+                    <span>Figma</span>
+                    <span aria-hidden="true">HTML</span>
+                    <span aria-hidden="true">CSS</span>
+                    <span aria-hidden="true">JavaScript</span>
+                    <span aria-hidden="true">Java</span>
+                    <span aria-hidden="true">PHP</span>
+                    <span aria-hidden="true">SQL</span>
+                    <span aria-hidden="true">Laravel</span>
+                    <span aria-hidden="true">Flutter</span>
+                    <span aria-hidden="true">React</span>
+                    <span aria-hidden="true">Git</span>
+                    <span aria-hidden="true">Figma</span>
+                </div>
+            </div>
+
+            <a class="scroll-hint reveal" style="--d:480ms" href="#about" aria-label="Scroll to About section">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </a>
+
+        </section>
+
+
+        <!-- About Section -->
+    <main>
+
+        <section class="about-section" id="about">
+
+            <div class="section-heading">
+                <span class="section-number">01</span>
+
+                <div>
+                    <p class="eyebrow">GET TO KNOW ME</p>
+                    <h1>About <span>Me</span></h1>
+                </div>
+            </div>
+
+
+            <div class="about-layout">
+
+                <!-- Left -->
+                <div class="about-left">
+
+                    <div class="profile-card">
+
+                        <div class="profile-top">
+
+                            <div class="avatar">
+                                BG
+                            </div>
+
+                            <div>
+                                <span class="availability">
+                                    <i></i>
+                                    Available for opportunities
+                                </span>
+
+                                <h2>Benju Guzman</h2>
+
+                                <p>
+                                    Software Developer & UI/UX Enthusiast
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-line"></div>
+
+
+                        <div class="profile-details">
+
+                            <div>
+                                <span>ROLE</span>
+                                <strong>Developer</strong>
+                            </div>
+
+                            <div>
+                                <span>EDUCATION</span>
+                                <strong>BSIT Student</strong>
+                            </div>
+
+                            <div>
+                                <span>FOCUS</span>
+                                <strong>Full Stack</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Stats -->
+                    <div class="stats">
+
+                        <div class="stat">
+                            <strong data-count="20">0</strong>
+                            <span>Projects</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong data-count="10">0</strong>
+                            <span>Technologies</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong data-count="3">0</strong>
+                            <span>Years Learning</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right -->
+                <div class="about-content">
+
+                    <div class="intro">
+                        <span class="intro-line"></span>
+
+                        <p>
+                            Hi, I'm <strong>Benju Guzman</strong>, a 3rd-year
+                            <strong>BSIT</strong> student at
+                            <strong>Cavite State University</strong>.
+                        </p>
+                    </div>
+
+
+                    <p>
+                        I'm passionate about <em>technology</em> and
+                        <em>software development</em>, and I love creating
+                        digital experiences that are both visually appealing
+                        and functional.
+                    </p>
+
+
+                    <p>
+                        I enjoy working on different types of projects, from
+                        <em>web applications</em> and <em>desktop systems</em>
+                        to <em>mobile applications</em> and UI/UX designs.
+                        My toolkit includes Java, PHP, HTML, CSS, JavaScript,
+                        SQL, Laravel, Flutter, and React-based tools.
+                    </p>
+
+
+                    <p>
+                        Beyond writing code, I'm interested in understanding
+                        how <em>users interact with applications</em> and how
+                        good design can make software easier and more
+                        enjoyable to use.
+                    </p>
+
+
+                    <p>
+                        My goal is to become a highly capable software
+                        developer who can confidently handle both
+                        <em>frontend</em> and <em>backend</em> development
+                        while maintaining strong attention to UI/UX,
+                        performance, security, and code quality.
+                    </p>
+
+
+                    <p>
+                        I'm always learning, experimenting with new
+                        technologies, and building projects that help me
+                        grow as a developer.
+                    </p>
+
+
+                    <!-- Focus Cards -->
+                    <div class="focus-grid">
+
+                        <article class="focus-card">
+                            <div class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="16 18 22 12 16 6"/>
+                                    <polyline points="8 6 2 12 8 18"/>
+                                </svg>
+                            </div>
+                            <h3>Development</h3>
+                            <p>
+                                Building maintainable, scalable and
+                                practical software solutions.
+                            </p>
+                        </article>
+
+                        <article class="focus-card">
+                            <div class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                    <polyline points="2 17 12 22 22 17"/>
+                                    <polyline points="2 12 12 17 22 12"/>
+                                </svg>
+                            </div>
+                            <h3>UI / UX</h3>
+                            <p>
+                                Designing interfaces around clarity,
+                                usability and visual hierarchy.
+                            </p>
+                        </article>
+
+                        <article class="focus-card">
+                            <div class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                </svg>
+                            </div>
+                            <h3>Problem Solving</h3>
+                            <p>
+                                Breaking complex problems into clean,
+                                understandable solutions.
+                            </p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Skills -->
+        <section class="skills-section" id="skills">
+
+            <div class="section-heading">
+                <span class="section-number">02</span>
+
+                <div>
+                    <p class="eyebrow">WHAT I WORK WITH</p>
+                    <h1>Technical <span>Skills</span></h1>
+                </div>
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>HTML</span>
+                        <strong>95%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:95%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>CSS</span>
+                        <strong>90%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:90%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <strong>85%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:85%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Java</span>
+                        <strong>85%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:85%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>PHP</span>
+                        <strong>80%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:80%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>SQL</span>
+                        <strong>80%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:80%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Laravel</span>
+                        <strong>70%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:70%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Flutter</span>
+                        <strong>65%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:65%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>React</span>
+                        <strong>75%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:75%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Git</span>
+                        <strong>85%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:85%"></span>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <div class="skill-info">
+                        <span>Figma</span>
+                        <strong>80%</strong>
+                    </div>
+                    <div class="bar">
+                        <span style="--value:80%"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Projects -->
+        <section class="projects-section" id="projects">
+
+            <div class="section-heading">
+                <span class="section-number">03</span>
+
+                <div>
+                    <p class="eyebrow">SELECTED WORK</p>
+                    <h1>Featured <span>Projects</span></h1>
+                </div>
+            </div>
+
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-icon">
+                            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </span>
+                        <span class="project-arrow">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="7" y1="17" x2="17" y2="7"/>
+                                <polyline points="7 7 17 7 17 17"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <h3>Full Stack Web Application</h3>
+                    <p>
+                        A database-driven web application focused on clean
+                        page structure, reusable templates and simple,
+                        intuitive user flows.
+                    </p>
+                    <div class="tags">
+                        <span>PHP</span>
+                        <span>SQL</span>
+                        <span>JavaScript</span>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-icon">
+                            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </span>
+                        <span class="project-arrow">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="7" y1="17" x2="17" y2="7"/>
+                                <polyline points="7 7 17 7 17 17"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <h3>Java Desktop System</h3>
+                    <p>
+                        A desktop information system with record management
+                        and a straightforward, functional interface built
+                        around OOP principles.
+                    </p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>SQL</span>
+                        <span>OOP</span>
+                    </div>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-icon">
+                            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </span>
+                        <span class="project-arrow">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="7" y1="17" x2="17" y2="7"/>
+                                <polyline points="7 7 17 7 17 17"/>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <h3>Mobile UI Concept</h3>
+                    <p>
+                        A mobile interface exploration covering layout
+                        systems, color hierarchy and consistent component
+                        design.
+                    </p>
+                    <div class="tags">
+                        <span>Flutter</span>
+                        <span>Figma</span>
+                        <span>UI / UX</span>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer / Contact -->
+    <footer class="footer" id="contact">
+        <div class="footer-inner">
+
+            <p class="eyebrow reveal" style="--d:0ms">GET IN TOUCH</p>
+
+            <h2 class="reveal" style="--d:80ms">
+                Let's build something
+                <span>meaningful</span>.
+            </h2>
+
+            <p class="footer-copy reveal" style="--d:160ms">
+                I am open to internships, collaborations and opportunities
+                where I can contribute, learn, and grow as a developer.
+            </p>
+
+            <div class="footer-cta reveal" style="--d:240ms">
+                <a class="btn btn-primary" href="mailto:benju.guzman@example.com">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Say Hello
+                </a>
+            </div>
+
+            <div class="socials reveal" style="--d:320ms">
+                <a href="#" aria-label="GitHub">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v1.5A6 6 0 0 1 16 8z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <p class="footer-note reveal" style="--d:400ms">
+                &copy; 2026 Benju Guzman. Designed and built with HTML, CSS and JavaScript.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <!-- Back to top -->
+    <button class="to-top" id="toTop" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
