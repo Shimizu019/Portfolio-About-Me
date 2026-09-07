@@ -1,103 +1,99 @@
-# DCIT50 — Laboratory 1
+# Portfolio - About Me Page
 
-**Git, GitHub, and Branching**
-
----
-
-## 📋 Student Information
-
-| Field          | Value                                                    |
-| -------------- | -------------------------------------------------------- |
-| **Student**    | Benju Guzman                                             |
-| **Repository** | [Shimizu019/lab1-guzman](https://github.com/Shimizu019/lab1-guzman) |
-| **Local path** | `C:\Users\CCL305\Documents\lab1guzman`                   |
+A professional and interactive About Me webpage designed to showcase your personal brand and background. This project includes HTML, CSS, and JavaScript to create an engaging user experience.
 
 ---
 
-## 🗂️ Branch Structure
+## 📋 Project Overview
 
-Two branches were created and pushed to GitHub:
+This is a personal portfolio project featuring an "About Me" page with:
+- **Responsive Design** — Works seamlessly on desktop, tablet, and mobile devices
+- **Interactive Elements** — JavaScript-enhanced interactivity
+- **Modern Styling** — Clean and professional CSS styling
+- **Easy Customization** — Simple structure for quick updates
 
-| Branch      | Contents                              | Purpose                                        |
-| ----------- | ------------------------------------- | ---------------------------------------------- |
-| `no-style`  | Original HTML-only version            | Preserves the initial webpage exactly as created |
-| `main`      | Full webpage with HTML, CSS, and JS   | Working / development version                  |
+---
+
+## 📁 Project Structure
 
 ```
-no-style              main
-└── index.html        ├── index.html
-                      ├── style.css
-                      └── script.js
+Portfolio-About-Me/
+├── index.html          # Main HTML structure
+├── style.css           # Styling and layout
+├── script.js           # Interactive functionality
+├── README.md           # Project documentation
+└── .gitignore          # Git ignore rules
 ```
 
 ---
 
-## 🚀 Steps Completed
+## 🚀 Features
 
-### Step 1 — Configure Git
+- **Hero Section** — Eye-catching introduction
+- **About Section** — Detailed personal information and background
+- **Skills & Expertise** — Showcase your professional skills
+- **Interactive Elements** — Smooth animations and transitions
+- **Contact Information** — Easy ways to reach out
 
-Set the global username and email so commits are linked to my GitHub account:
+---
 
+## 💻 Getting Started
+
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- A code editor (VS Code, Sublime Text, etc.)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-git config --global user.name "Benju Guzman"
-git config --global user.email "benjugarcia01@gmail.com"
+git clone https://github.com/Shimizu019/Portfolio-About-Me.git
 ```
 
-### Step 2 — Create the Project Folder
-
-Created the project folder and opened it in Visual Studio Code:
-
-```
-C:\Users\CCL305\Documents\lab1guzman
-```
-
-### Step 3 — Initialize the Local Git Repository
-
-Initialized Git inside the project folder and checked its status:
-
+2. Navigate to the project directory:
 ```bash
-git init
-git status
+cd Portfolio-About-Me
 ```
 
-### Step 4 — Create the Initial HTML Webpage
-
-Created the original HTML-only version of the webpage:
-
-```
-index.html
-```
-
-### Step 5 — Commit the Initial HTML Version
-
-Staged and committed the HTML file:
-
+3. Open `index.html` in your browser or use a local server:
 ```bash
-git add index.html
-git commit -m "Create initial HTML webpage"
+# Using Python
+python -m http.server 8000
+
+# Using Node.js (http-server)
+npx http-server
 ```
 
-### Step 6 — Create the `main` and `no-style` Branches
+---
 
-Renamed the default branch from `master` to `main`, then created the `no-style` branch to preserve the original HTML-only version:
+## 🎨 Customization
 
-```bash
-git branch -M main
-git branch no-style
-```
+Edit the files to personalize your portfolio:
 
-The repository now has two branches:
+- **index.html** — Update your personal information, sections, and content
+- **style.css** — Modify colors, fonts, and layout
+- **script.js** — Add custom interactions and functionality
 
-```
-main
-no-style
-```
+---
 
-### Step 7 — Create and Connect the GitHub Repository
+## 📝 License
 
-Created a GitHub repository named `lab1-guzman`, then connected it to the local repository:
+This project is open source and available under the MIT License.
 
-```bash
+---
+
+## 👤 Author
+
+**Benju Guzman**
+
+- GitHub: [@Shimizu019](https://github.com/Shimizu019)
+- Repository: [Portfolio-About-Me](https://github.com/Shimizu019/Portfolio-About-Me)
+
+---
+
+## 📧 Contact
+
+Feel free to reach out if you have any questions or suggestions!
 git remote add origin https://github.com/Shimizu019/lab1-guzman.git
 git remote -v
 ```
